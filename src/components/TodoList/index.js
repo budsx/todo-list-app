@@ -2,7 +2,6 @@ import React from 'react';
 import TodoCard from '../TodoCard';
 
 const TodoList = (props) => {
-  // console.log('from TodoList  ', props);
   const _deleteHandler = (id) => {
     props.deleteHandler(id);
   };

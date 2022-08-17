@@ -3,15 +3,6 @@ import React from 'react';
 const TodoAdd = (props) => {
   const { todo, setTodo, handleSubmit } = props;
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (!todo.name || !todo.desc) {
-  //     alert('Please fill all field');
-  //     return;
-  //   } else if (!todo.id) {
-  //     addHandler(todo);
-  //   } else {
-
   return (
     <form
       className="form-container"
@@ -20,7 +11,7 @@ const TodoAdd = (props) => {
       }}
     >
       <div className="form-field">
-        <label htmlFor="name">Name :</label>
+        <label htmlFor="name"></label>
         <input
           type="text"
           name="name"
@@ -32,7 +23,7 @@ const TodoAdd = (props) => {
         />
       </div>
       <div className="form-field">
-        <label htmlFor="name">Description :</label>
+        <label htmlFor="name"></label>
         <input
           type="text"
           name="decription"

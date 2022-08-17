@@ -22,7 +22,6 @@ const Main = () => {
   };
 
   const deleteTodoHandler = (id) => {
-    console.log(id);
     const newTodos = todos.filter((todo) => {
       return todo.id !== id;
     });
@@ -31,31 +30,15 @@ const Main = () => {
   };
 
   const updateTodoHandler = (id) => {
-    // console.log(id);
     const getTodo = todos.find((todo) => {
       return todo.id === id;
     });
-    console.log('Name', getTodo.name);
-    console.log('Desc', getTodo.desc);
+
     setTodo({
       id,
       name: getTodo.name,
       desc: getTodo.desc,
     });
-    // update date todo
-    // const updateTodoById = todos.map((list) => {
-    //   if (list.id === todo.id) {
-    //     return {
-    //       ...list,
-    //       name: todo.name,
-    //       desc: todo.desc,
-    //     };
-    //   } else {
-    //     return todo;
-    //   }
-    // });
-    // setTodos(updateTodoById);
-    // localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updateTodoById));
   };
 
   const handleSubmit = (e) => {
@@ -102,7 +85,6 @@ const Main = () => {
         todos={todos}
         setTodo={setTodo}
         handleSubmit={handleSubmit}
-        // handleSubmit={handleSubmit}
       />
       <TodoList
         todos={todos}
